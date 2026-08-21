@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #20302b;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5ebe8;
+}
+
+.nav-container {
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 800;
+    color: #254d3c;
+}
+
+.logo span {
+    color: #e68a45;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #405049;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #e68a45;
+}
+
+.appointment-button {
+    text-decoration: none;
+    background: #e68a45;
+    color: white;
+
+    padding: 11px 19px;
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: #fff6ee;
+    padding: 100px 0;
+}
+
+.hero-content {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.small-title {
+    color: #e68a45;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e68a45;
+}
+
+.hero-text > p:not(.small-title) {
+    max-width: 600px;
+
+    font-size: 18px;
+
+    color: #65716b;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.primary-button {
+    background: #e68a45;
+
+    color: white;
+
+    border: none;
+}
+
+.primary-button:hover {
+    background: #ce7232;
+}
+
+.secondary-button {
+    border: 1px solid #e68a45;
+
+    color: #d27536;
+
+    background: white;
+}
+
+
+/* HERO PET */
+
+.hero-pet {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.pet-circle {
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    background: #dcefe5;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 170px;
+
+    box-shadow:
+        0 25px 60px rgba(40, 70, 55, 0.12);
+}
+
+.pet-card {
+    position: absolute;
+
+    bottom: 15px;
+    right: 0;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    width: 240px;
+
+    box-shadow:
+        0 15px 40px rgba(30, 50, 40, 0.15);
+}
+
+.pet-card strong {
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+.pet-card p {
+    color: #69756f;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-header {
+    max-width: 700px;
+
+    text-align: center;
+
+    margin: 0 auto 55px;
+}
+
+.section-header h2,
+.about-text h2,
+.appointment-text h2 {
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+}
+
+.section-header > p:not(.small-title) {
+    color: #69756f;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.service-card {
+    border: 1px solid #e4ebe7;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 40px rgba(40, 60, 50, 0.1);
+}
+
+.service-icon {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #69756f;
+
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: #e68a45;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #f4faf7;
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    min-height: 450px;
+
+    background: #dcefe5;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.animal-placeholder {
+    font-size: 160px;
+}
+
+.about-text > p:not(.small-title) {
+    color: #69756f;
+
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 30px;
+}
+
+.stats div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.stats strong {
+    font-size: 30px;
+
+    color: #e68a45;
+}
+
+.stats span {
+    font-size: 13px;
+
+    color: #69756f;
+}
+
+
+/* =========================
+   TEAM
+========================= */
+
+.team {
+    background: white;
+}
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.team-card {
+    text-align: center;
+
+    border: 1px solid #e4ebe7;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(40, 60, 50, 0.1);
+}
+
+.doctor-image {
+    width: 140px;
+    height: 140px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #fff0e4;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+}
+
+.team-card h3 {
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    color: #e68a45;
+
+    font-weight: 600;
+}
+
+.team-card span {
+    color: #69756f;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials {
+    background: #fff6ee;
+}
+
+.testimonial-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(40, 60, 50, 0.06);
+}
+
+.stars {
+    color: #f1a51b;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    color: #69756f;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   APPOINTMENT
+========================= */
+
+.appointment {
+    background: #eaf5ef;
+}
+
+.appointment-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.appointment-text > p:not(.small-title) {
+    color: #69756f;
+
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin-bottom: 12px;
+
+    font-weight: 500;
+}
+
+.appointment-form {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(40, 60, 50, 0.08);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d5dfda;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #f5d0b4;
+
+    border-color: #e68a45;
+}
+
+.form-button {
+    width: 100%;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #203b30;
+
+    color: white;
+
+    padding-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+}
+
+.footer-content p {
+    color: #c3d0ca;
+
+    margin-top: 10px;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content a:not(.logo) {
+    display: block;
+
+    color: #c3d0ca;
+
+    text-decoration: none;
+
+    margin-bottom: 8px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .appointment-button {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero-content,
+    .about-content,
+    .appointment-content {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-pet {
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pet-circle {
+        width: 280px;
+        height: 280px;
+
+        font-size: 130px;
+    }
+
+    .pet-card {
+        right: 0;
+        bottom: 0;
+    }
+
+    .stats {
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .section-header h2,
+    .about-text h2,
+    .appointment-text h2 {
+        font-size: 32px;
+    }
+
+    .appointment-form {
+        padding: 25px;
+    }
+
+}
