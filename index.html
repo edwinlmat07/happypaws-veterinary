@@ -514,142 +514,43 @@
             </div>
 
 
-            <form id="appointmentForm" class="appointment-form">
+            <section id="citas">
+    <h2>Book an Appointment</h2>
 
-                <div class="form-group">
+    <form id="appointmentForm">
 
-                    <label for="ownerName">
-                        Your Name
-                    </label>
+        <label for="name">Nombre Completo:</label>
+        <input type="text" id="name" name="name" required>
 
-                    <input
-                        type="text"
-                        id="ownerName"
-                        placeholder="Your full name"
-                        required>
-                </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
+        <label for="phone">Numero:</label>
+        <input type="tel" id="phone" name="phone" required>
 
-                <div class="form-group">
+        <label for="pet">Nombre de la mascota:</label>
+        <input type="text" id="pet" name="pet" required>
 
-                    <label for="email">
-                        Email
-                    </label>
+        <label for="service">Servicios:</label>
+        <select id="service" name="service" required>
+            <option value="">Selecione su servicio</option>
+            <option value="checkup">Chequeo General</option>
+            <option value="vaccination">Inyecciones</option>
+            <option value="grooming">Limpieza</option>
+            <option value="emergency">Emergencia</option>
+        </select>
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="you@example.com"
-                        required>
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
 
-                </div>
+        <label for="message">Additional Information:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
 
+        <button type="submit">Request Appointment</button>
 
-                <div class="form-group">
+    </form>
 
-                    <label for="petName">
-                        Pet's Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="petName"
-                        placeholder="Your pet's name"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="petType">
-                        Pet Type
-                    </label>
-
-                    <select id="petType" required>
-
-                        <option value="">
-                            Select pet type
-                        </option>
-
-                        <option>
-                            Dog
-                        </option>
-
-                        <option>
-                            Cat
-                        </option>
-
-                        <option>
-                            Bird
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="service">
-                        Service
-                    </label>
-
-                    <select id="service" required>
-
-                        <option value="">
-                            Select a service
-                        </option>
-
-                        <option>
-                            Wellness Exam
-                        </option>
-
-                        <option>
-                            Vaccination
-                        </option>
-
-                        <option>
-                            Dental Care
-                        </option>
-
-                        <option>
-                            Emergency Care
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        rows="4"
-                        placeholder="Tell us about your pet...">
-                    </textarea>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="primary-button form-button">
-
-                    Request Appointment
-
-                </button>
-
-            </form>
+</section>
 
         </div>
 

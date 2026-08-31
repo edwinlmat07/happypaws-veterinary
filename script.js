@@ -56,4 +56,16 @@ appointmentForm.addEventListener("submit", function (event) {
 
     appointmentForm.reset();
 
+    
+
+});
+
+const form = document.getElementById("appointmentForm");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    alert("Your appointment request has been submitted!");
+
+    form.reset();
 });
